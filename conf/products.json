@@ -1,0 +1,42 @@
+{
+  "0": {
+    "id": "hibisque",
+    "nom": "Hibisque",
+    "longueur": 4,
+    "prix": 55,
+    "nom alternatif": "Hibisque, Florba, Topizo, Tohozin",
+    "image": "https://shop.vlisco.com/media/catalog/product/cache/d13875738da2ca279e73f3f06224c5d6/V/L/VL_FI_VL00921.207_R_00.jpg"
+  },
+  "1": {
+    "id": "petits-etoiles",
+    "nom": "Petits Etoiles",
+    "longueur": 4,
+    "prix": 5,
+    "nom alternatif": "Petits Etoiles, Small star, Kilikili star, Stars",
+    "image": "https://shop.vlisco.com/media/catalog/product/cache/d13875738da2ca279e73f3f06224c5d6/V/L/VL_FI_VL00954.021_R_01.jpg"
+  },
+  "2": {
+    "id": "air-afrique",
+    "nom": "Air Afrique",
+    "longueur": 6,
+    "prix": 96,
+    "nom alternatif": "Air Afrique, Speedbird, Eneke, Kuminetu, Sikatuse Anumaa, Hirondelles",
+    "image": "https://shop.vlisco.com/media/catalog/product/cache/d13875738da2ca279e73f3f06224c5d6/V/L/VL_FI_VL0H524.221_R_00.jpg"
+  },
+  "3": {
+    "id": "rolls-royce",
+    "nom": "Rolls Royce",
+    "longueur": 6,
+    "prix": 96,
+    "nom alternatif": "Fleurs De Mariage, Mgbolodi",
+    "image": "https://i0.wp.com/www.vlisco.com/wp-content/uploads/2018/08/mariageforwebVL03541.036.jpg"
+  },
+  "4": {
+    "id": "awoulaba",
+    "nom": "Awoulaba",
+    "longueur": 6,
+    "prix": 76,
+    "nom alternatif": "Awoulaba, Queen of Beauty",
+    "image": "https://shop.vlisco.com/media/catalog/product/cache/d13875738da2ca279e73f3f06224c5d6/V/L/VL_FI_VL03988.204_R_00.jpg"
+  }
+}

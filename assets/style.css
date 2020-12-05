@@ -1,0 +1,543 @@
+/*
+
+global
+
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Ubuntu, system-ui, sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 1.74rem;
+    line-height: 1.55;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 2rem;
+    line-height: 1.7;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -.04em;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+a {
+  outline: none;
+}
+
+input:focus {
+  outline: 0;
+}
+
+/*
+
+accueil / mobile
+
+*/
+
+@media (max-width: 767px) {
+
+  body.accueil {
+    background-color: #ffb500;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(accueil-background-mobile-600x805-q30.jpg);
+  }
+
+  body.accueil::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0 0 0 / 85%);
+    animation-fill-mode: both;
+    animation-duration: 400ms;
+    animation-name: fadeIn;
+  }
+
+  body.accueil main {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+
+  body.accueil main a.alert {
+    margin: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #EEE;
+    color: black;
+    padding: 3rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    opacity: 0;
+    transition: transform 500ms cubic-bezier(0.770, 0, 0.175, 1);
+    transform: translateY(-300%);
+    box-shadow: 0 0 .5rem black;
+    z-index: 2;
+  }
+
+  body.accueil main a.alert:target {
+    transform: none;
+    opacity: 1;
+  }
+
+  body.accueil main form {
+    width: 100%;
+    color: #FFF;
+    padding: 3rem 2rem;
+
+    animation-fill-mode: both;
+    animation-duration: 1s;
+    animation-name: fadeIn;
+  }
+
+  body.accueil main form label {
+    display: block;
+  }
+
+  body.accueil main form input {
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 1.5rem;
+    border: none;
+  }
+
+  body.accueil main form input[type="email"],
+  body.accueil main form input[type="password"] {
+    border: .3rem solid transparent;
+    border-radius: .4rem;
+    background-color: #EFEFEF;
+    box-shadow: inset 0 0 1rem rgba(0 0 0 / 50%);
+    transition: box-shadow 300ms;
+    margin-bottom: 2rem;
+  }
+
+  body.accueil main form input[type="email"]:focus,
+  body.accueil main form input[type="password"]:focus {
+    box-shadow: inset 0 0 .5rem rgba(0 0 0 / 50%);
+  }
+
+  body.accueil main form input[type="submit"] {
+    border: .3rem solid #FFF;
+    border-radius: 1rem;
+    color: #FFF;
+    background-color: rgba(0 0 0 / 33%);
+  }
+}
+
+/*
+
+accueil / desktop
+
+*/
+
+@media (min-width: 768px) {
+
+  body.accueil {
+    background-color: #ffb500;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(accueil-background-desktop-1920x1080-q83.jpg);
+  }
+
+  body.accueil::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0 0 0 / 85%);
+    animation-fill-mode: both;
+    animation-duration: 200ms;
+    animation-name: fadeIn;
+  }
+
+  body.accueil main {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+
+  body.accueil main a.alert {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    border-radius: 1rem;
+    background-color: #EEE;
+    color: black;
+    padding: 2rem 4rem;
+    text-align: center;
+    text-decoration: none;
+    opacity: 0;
+    transition: transform 500ms cubic-bezier(0.770, 0, 0.175, 1);
+    transform: translateX(300%);
+    border-bottom: .3rem solid rgba(0 0 0 / 85%);
+    box-shadow: 0 0 .5rem black;
+    z-index: 2;
+  }
+
+  body.accueil main a.alert:target {
+    opacity: 1;
+    transform: none;
+  }
+
+  body.accueil main form {
+    max-width: 70rem;
+    color: #FFF;
+    padding: 3rem 2rem;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+    animation-name: fadeIn;
+  }
+
+  body.accueil main form label {
+    display: block;
+  }
+  
+  body.accueil main form input {
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 1.5rem;
+    border: none;
+  }
+
+  body.accueil main form input[type="email"],
+  body.accueil main form input[type="password"] {
+    border: .3rem solid transparent;
+    border-radius: .4rem;
+    background-color: #DDD;
+    box-shadow: inset 0 0 2rem -.5rem black;
+    transition: box-shadow 300ms;
+    margin-bottom: 2rem;
+  }
+
+  body.accueil main form input[type="email"]:focus,
+  body.accueil main form input[type="password"]:focus {
+    box-shadow: inset 0 0 1.25rem -.5rem black;
+  }
+
+  body.accueil main form input[type="submit"] {
+    border: .3rem solid #FFF;
+    border-radius: 1rem;
+    color: #FFF;
+    background-color: rgba(0 0 0 / 33%);
+    cursor: pointer;
+    position: relative;
+  }
+
+  body.accueil main form input[type="submit"]:focus {
+    transform: translateY(.2rem);
+    background-color: rgba(0 0 0 / 75%);
+  }
+
+}
+
+/*
+
+back-office / mobile
+
+*/
+
+@media (max-width: 767px) {
+
+  body.back-office {
+    background-color: #EFEFEF;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  body.back-office header {
+    background-color: rgba(0 0 0 / 10%);
+    color: rgba(0 0 0 / 50%);
+    text-align: center;
+    padding: 1rem;
+  }
+
+  body.back-office header h2 {
+    padding: 0;
+    margin: 0;
+  }
+
+  body.back-office main {
+    padding: 1rem;
+  }
+
+  body.back-office footer {
+    background-color: rgba(0 0 0 / 10%);
+    color: rgba(0 0 0 / 75%);
+    text-align: right;
+  }
+
+  body.back-office footer a {
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+    color: currentColor;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #EFEFEF;
+  }
+
+  .produit {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-color: #373737;
+    margin-bottom: 5rem;
+    color: #EFEFEF;
+    border-radius: 1rem;
+  }
+
+
+  /* fontsize */
+  .prix, .longueur, .altnom {
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+  .altnom {
+    margin-left: .5rem;
+    margin-right: .5rem;
+  }
+
+  .imgWax {
+    width: 40vw;
+    height: auto;
+    border: #DDD solid .5rem;
+    margin-bottom: 3rem;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+  }
+  
+  .overlay img{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    height: 80vh;
+    width: auto;
+  }
+
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .close {
+    position: fixed;
+    bottom: .7rem;
+    left: 48vw;
+    text-align: center;
+    transition: all 200ms;
+    font-size: 5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffb500;
+  }
+}
+
+/*
+
+back-office / desktop
+
+*/
+
+@media (min-width: 768px) {
+
+  body.back-office {
+    background-color: #EFEFEF;
+    display: grid;
+    grid-template-areas: "h f"
+                         "m m";
+    grid-template-rows: auto 1fr;
+  }
+
+  body.back-office header {
+    grid-area: h;
+    background-color: rgba(0 0 0 / 10%);
+    color: rgba(0 0 0 / 50%);
+    padding: 2rem;
+  }
+
+  body.back-office header h2 {
+    padding: 0;
+    margin: 0;
+  }
+
+  body.back-office main {
+    grid-area: m;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 70rem;
+    text-align: center;
+  }
+
+  body.back-office footer {
+    grid-area: f;
+    background-color: rgba(0 0 0 / 10%);
+    color: rgba(0 0 0 / 50%);
+    text-align: right;
+  }
+
+  body.back-office footer a {
+    padding: 2rem;
+    display: inline-block;
+    text-decoration: none;
+    color: currentColor;
+  }
+
+  body.back-office footer a:hover {
+    background-color: rgba(0 0 0 / 10%);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #EFEFEF;
+  }
+
+  .produit {
+    min-width: 45vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-color: #373737;
+    margin-bottom: 5rem;
+    color: #EFEFEF;
+    border-radius: 1rem;
+  }
+
+
+  /* fontsize */
+  .prix, .longueur, .altnom {
+    font-size: 2.5rem;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+  .altnom {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .imgWax {
+    width: 250px;
+    height: auto;
+    border: #DDD solid 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+  }
+  
+  .overlay img{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    height: 90vh;
+    width: auto;
+    border: #DDD solid 2rem;
+  }
+
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .close {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 6rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFF;
+  }
+
+  .close:hover {
+    color: #ffb500;
+  }
+
+}
+
+/*
+
+animation corner
+
+*/
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

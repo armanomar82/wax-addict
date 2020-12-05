@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>wax-addict — boutique officielle</title>
+  <meta name="description" content="Bienvenue dans la boutique privée “Wax-Addict”. Retrouvez notre toute dernière sélection de tissus africains hauts de gamme.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="accueil">
+  <main>
+    <a href="#" class="alert" id="deconnexion">Déconnexion effectuée, à bientôt</a>
+    <a href="#" class="alert" id="mauvaise-identification">Adresse électronique ou mot de passe incorrect</a>
+    <a href="#" class="alert" id="mauvaise-session">Votre session n'est pas valide, identifiez-vous à nouveau svp</a>
+    <form action="logon.php" method="post">
+      <label for="login">Adresse électronique</label>
+      <input type="email" name="login" id="login" required>
+      <label for="password">Mot de passe</label>
+      <input type="password" name="password" id="password" required><input type="submit" value="valider">
+    </form>
+  </main>
+</body>
+
+</html>
